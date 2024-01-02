@@ -221,7 +221,7 @@ export interface CallbacksOptions<P = Profile, A = Account> {
     }
     /** If Credentials provider is used, it contains the user credentials */
     credentials?: Record<string, CredentialInput>
-  }) => Awaitable<boolean>
+  }) => Awaitable<boolean | string>
   /**
    * This callback is called anytime the user is redirected to a callback URL (e.g. on signin or signout).
    * By default only URLs on the same URL as the site are allowed,
